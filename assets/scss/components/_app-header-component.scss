@@ -16,28 +16,28 @@
     justify-content: space-between;
     align-items: center;
     @include bp($tablet, min) {
-      height: 80px;
+      height: 100px;
     }
     @include bp($desktopSmall, min) {
-      height: 100px;
+      height: 120px;
     }
     .header-back-button-container {
       justify-content: center;
       &__back-button {
         display: block;
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         background-image: url('~assets/img/back-btn.png');
         background-size: cover;
         border-radius: 23px;
         cursor: pointer;
         @include bp($desktopSmall, min) {
-          width: 55px;
-          height: 55px;
+          width: 50px;
+          height: 50px;
         }
         @include bp($desktopFullHd, min) {
-          width: 60px;
-          height: 60px;
+          width: 55px;
+          height: 55px;
         }
       }
     }
@@ -51,18 +51,18 @@
         @include bp($tablet, min) {
           text-transform: capitalize;
           font-weight: 200;
-          font-size: 32px;
-          line-height: 40px;
+          font-size: 38px;
+          line-height: 48px;
           padding-left: 20px;
           box-sizing: border-box;
         }
         @include bp($desktopSmall, min) {
-          font-size: 46px;
-          line-height: 54px;
+          font-size: 50px;
+          line-height: 60px;
         }
         @include bp($desktopFullHd, min) {
-          font-size: 56px;
-          line-height: 60px;
+          font-size: 64px;
+          line-height: 70px;
         }
       }
     }
@@ -71,41 +71,41 @@
       &__cart-button {
         display: block;
         width: 120px;
-        height: 45px;
+        height: 40px;
         padding-right: 10px;
         background: url('~assets/img/cart.png') no-repeat, #d9644a;
         background-position: 10px center;
-        background-size: 24px;
+        background-size: 26px;
         text-align: right;
         font-size: 24px;
-        line-height: 46px;
+        line-height: 40px;
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
         @include bp($tablet, min) {
           width: 180px;
-          height: 50px;
+          height: 40px;
           padding-right: 15px;
-          line-height: 50px;
+          line-height: 40px;
           background-position: 15px center;
           background-size: 28px;
         }
         @include bp($desktopSmall, min) {
           width: 230px;
-          height: 55px;
+          height: 50px;
           padding-right: 20px;
-          font-size: 28px;
-          line-height: 55px;
+          font-size: 30px;
+          line-height: 50px;
           background-position: 20px center;
           background-size: 36px;
         }
         @include bp($desktopFullHd, min) {
-          width: 250px;
-          height: 60px;
-          font-size: 32px;
-          line-height: 60px;
+          width: 270px;
+          height: 55px;
+          font-size: 34px;
+          line-height: 55px;
           background-position: 20px center;
-          background-size: 40px;
+          background-size: 42px;
         }
       }
     }
