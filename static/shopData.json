@@ -1,0 +1,121 @@
+[
+    {
+        "categoryName": "T-Shirts",
+        "categoryBg": "../img/categories/t-shirts_bg.jpg",
+        "categoryGoods": [
+            {
+                "name": "Green-Xtreame",
+                "path": "../img/categories/t-shirts/green_xtreame.jpg",
+                "cost": 250
+            },
+            {
+                "name": "Digital Owl",
+                "path": "../img/categories/t-shirts/digital_owl.jpg",
+                "cost": 312
+            },
+            {
+                "name": "I Can",
+                "path": "../img/categories/t-shirts/i_can.jpg",
+                "cost": 280
+            },
+            {
+                "name": "GB Shirts",
+                "path": "../img/categories/t-shirts/gb_shirts.jpg",
+                "cost": 200
+            }
+        ]
+    },
+    {
+        "categoryName": "Caps",
+        "categoryBg": "../img/categories/caps_bg.jpg",
+        "categoryGoods": [
+            {
+                "name": "BLue Cup",
+                "path": "../img/categories/caps/blue_cup.jpg",
+                "cost": 110
+            },
+            {
+                "name": "Dota Cup",
+                "path": "../img/categories/caps/dota_cup.jpg",
+                "cost": 130
+            }
+        ]
+    },
+    {
+        "categoryName": "Cards",
+        "categoryBg": "../img/categories/cards_bg.jpg",
+        "categoryGoods": [
+            {
+                "name": "Happy Birthday",
+                "path": "../img/categories/cards/birthday.jpg",
+                "cost": 50
+            },
+            {
+                "name": "Marry Christmas",
+                "path": "../img/categories/cards/christmas.jpg",
+                "cost": 60
+            }
+        ]
+    },
+    {
+        "categoryName": "Toys",
+        "categoryBg": "../img/categories/toys_bg.jpg",
+        "categoryGoods": [
+            {
+                "name": "Donald Duck",
+                "path": "../img/categories/toys/donald.jpg",
+                "cost": 300
+            },
+            {
+                "name": "Monster",
+                "path": "../img/categories/toys/monster.jpg",
+                "cost": 250
+            },
+            {
+                "name": "Bear",
+                "path": "../img/categories/toys/bear.jpg",
+                "cost": 280
+            }
+        ]
+    },
+    {
+        "categoryName": "Magnets",
+        "categoryBg": "../img/categories/magnets_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Pens & Pencils",
+        "categoryBg": "../img/categories/pens_&_pencils_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Bags",
+        "categoryBg": "../img/categories/bags_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Notebooks",
+        "categoryBg": "../img/categories/notebooks_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Scrum Cards",
+        "categoryBg": "../img/categories/scrum_cards_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Phones",
+        "categoryBg": "../img/categories/phones_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Boots",
+        "categoryBg": "../img/categories/boots_bg.jpg",
+        "categoryGoods": []
+    },
+    {
+        "categoryName": "Tablets",
+        "categoryBg": "../img/categories/tablets_bg.jpg",
+        "categoryGoods": []
+    }
+]

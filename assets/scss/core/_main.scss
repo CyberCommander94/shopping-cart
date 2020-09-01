@@ -1,0 +1,36 @@
+@import '_fonts.scss';
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+
+@import '../pages/index.scss';
+
+@import '../components/_app-header-component.scss';
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 200;
+}
+.main-app-layout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 5px 0;
+  overflow-y: hidden;
+  &::after,
+  &::before {
+    content: '';
+    position: fixed;
+    z-index: 10000;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    background: url('~assets/img/borders.png') repeat-x;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &::before {
+    top: 0;
+  }
+}
