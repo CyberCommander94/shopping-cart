@@ -3,7 +3,7 @@
     <div class="elements-wrapper">
       <div class="header-back-button-container">
         <nuxt-link
-          :v-if="isBackBtnVisible"
+          v-if="isBackBtnVisible"
           class="header-back-button-container__back-button"
           to="/cart"
         ></nuxt-link>
@@ -13,7 +13,7 @@
       </div>
       <div class="header-cart-button-container">
         <nuxt-link
-          :v-if="isBackBtnVisible"
+          v-if="isCartBtnVisible"
           class="header-cart-button-container__cart-button"
           to="/cart"
           >${{ totalCost }}
@@ -25,7 +25,6 @@
     </div>
   </header>
 </template>
-
 <script>
 export default {
   name: 'AppHeaderComponent',
