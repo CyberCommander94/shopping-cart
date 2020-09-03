@@ -1,11 +1,10 @@
 @import '_fonts.scss';
 @import '_reset.scss';
-@import '_variables.scss';
-@import '_mixins.scss';
-
-@import '../pages/index.scss';
-
-@import '../components/_app-header-component.scss';
+@import '_variables';
+@import '_mixins';
+@import '../components/_categories-item-component';
+@import '../components/_app-header-component';
+@import '../pages/_index.scss';
 
 body {
   font-family: 'Segoe UI', sans-serif;

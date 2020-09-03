@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import AppHeaderComponent from '~components/AppHeaderComponent.vue'
+import AppHeaderComponent from '@/components/AppHeaderComponent.vue'
 
 // Vue.use(someModule, { settings })
 

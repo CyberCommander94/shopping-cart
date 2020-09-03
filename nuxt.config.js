@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'server',
+  target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/scss/core/_main.scss'],
+  css: ['@assets/scss/core/_main.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -54,9 +54,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
-  env: {
-    baseUrl: 'http://localhost:3000/'
-  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

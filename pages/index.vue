@@ -7,18 +7,18 @@
       total-cost="5640"
     />
     <section class="categories-list-container">
-      <categories-item
+      <CategoriesItem
         v-for="(item, index) in getCategoriesData"
         :key="index"
         :item-info="item"
         :index="index"
-      ></categories-item>
+      />
     </section>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import CategoriesItem from '~/components/CategoriesItemComponent.vue'
 
 export default {
@@ -30,12 +30,6 @@ export default {
   },
   computed: {
     ...mapGetters('pages/categories', ['getCategoriesData'])
-  },
-  created() {
-    this.loadCategoriesData()
-  },
-  methods: {
-    ...mapActions('pages/categories', ['loadCategoriesData'])
   }
 }
 </script>
