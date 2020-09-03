@@ -54,6 +54,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  env: {
+    baseUrl: 'http://localhost:3000/'
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

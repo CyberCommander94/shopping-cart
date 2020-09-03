@@ -1,0 +1,51 @@
+.category-item {
+  @include bp($tablet, min) {
+    .large {
+      grid-column: span 37;
+      grid-row-end: span 2;
+    }
+    .high {
+      grid-column: span 24;
+      grid-row-end: span 2;
+    }
+    .wide {
+      grid-column: span 37;
+      grid-row-end: span 1;
+    }
+    .small {
+      grid-column: span 24;
+      grid-row-end: span 1;
+    }
+    .extra-wide {
+      grid-column: span 48;
+      grid-row-end: span 1;
+    }
+  }
+  figure {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+    @include bp($tablet, min) {
+    }
+    @include bp($desktopSmall, min) {
+    }
+    @include bp($desktopFullHd, min) {
+    }
+    > figcaption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      height: 40px;
+      color: #333333;
+      font-family: 'SegoeUI';
+      font-size: 22px;
+      line-height: 40px;
+      padding-left: 20px;
+    }
+  }
+}

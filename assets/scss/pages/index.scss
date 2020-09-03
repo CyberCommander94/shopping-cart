@@ -1,1 +1,9 @@
-
+.categories-list-container {
+  height: auto;
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(auto-fit, 180px);
+  grid-auto-flow: column dense;
+}
