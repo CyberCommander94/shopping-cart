@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
+    "mobile-device-detect": "^0.4.3",
     "nuxt": "^2.14.0",
-    "scroll-js": "^3.3.0"
+    "scroll-js": "^3.3.0",
+    "vue-window-size": "^0.6.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
