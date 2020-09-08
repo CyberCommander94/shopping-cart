@@ -1,0 +1,21 @@
+.main-app-layout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  &::after{
+    content: '';
+    position: fixed;
+    z-index: 10000;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    background: url('~assets/img/borders.png') repeat-x;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &::before {
+    top: 0;
+  }
+}

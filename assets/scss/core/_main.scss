@@ -1,34 +1,4 @@
-@import '_fonts.scss';
-@import '_reset.scss';
-@import '_variables';
-@import '_mixins';
-@import '../components/_categories-item-component';
-@import '../components/_app-header-component';
-@import '../pages/_index.scss';
-
 body {
   font-family: 'Segoe UI', sans-serif;
   font-weight: 200;
-}
-.main-app-layout {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: hidden;
-  &::after,
-  &::before {
-    content: '';
-    position: fixed;
-    z-index: 10000;
-    height: 5px;
-    width: 100%;
-    left: 0;
-    background: url('~assets/img/borders.png') repeat-x;
-  }
-  &::after {
-    bottom: 0;
-  }
-  &::before {
-    top: 0;
-  }
 }

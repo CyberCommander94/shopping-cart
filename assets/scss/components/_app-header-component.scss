@@ -1,10 +1,9 @@
 .header-block {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  left: -10vw;
+  width: 120vw;
   height: auto;
-  padding: 20px;
   box-sizing: border-box;
   background-color: #ffffff;
   z-index: 9999;
@@ -14,8 +13,10 @@
   .elements-wrapper {
     width: 100%;
     display: flex;
+    height: 40px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    overflow: hidden;
     @include bp($tablet, min) {
       height: 100px;
     }
@@ -23,15 +24,35 @@
       height: 120px;
     }
     .header-back-button-container {
-      justify-content: center;
+      background-color: #4ea686;
+      width: 40%;
+      height: 100%;
+      -webkit-transform: skewX(-45deg);
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+      transform: skewX(-45deg);
       &__back-button {
         display: block;
-        width: 40px;
-        height: 40px;
-        background-image: url('~assets/img/back-btn.png');
-        background-size: cover;
-        border-radius: 23px;
+        position: relative;
+        width: 100%;
+        height: 100%;
         cursor: pointer;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 32vw;
+          -webkit-transform: skewX(45deg) translate3d(-50%, -50%, 0);
+          -moz-transform: skewX(45deg) translate3d(-50%, -50%, 0);
+          -ms-transform: skewX(45deg) translate3d(-50%, -50%, 0);
+          -o-transform: skewX(45deg) translate3d(-50%, -50%, 0);
+          transform: skewX(45deg) translate3d(-50%, -50%, 0);
+          width: 30px;
+          height: 30px;
+          background-image: url('~assets/img/back-btn.png');
+          background-size: cover;
+        }
         @include bp($desktopSmall, min) {
           width: 50px;
           height: 50px;
@@ -43,46 +64,76 @@
       }
     }
     .header-title-container {
+      background-color: #d9caad;
       display: none;
       width: 75%;
-      @include bp($tablet, min) {
-        display: block;
-      }
-      &__title {
-        @include bp($tablet, min) {
-          text-transform: capitalize;
-          font-weight: 200;
-          font-size: 38px;
-          line-height: 48px;
-          padding-left: 20px;
-          box-sizing: border-box;
-        }
-        @include bp($desktopSmall, min) {
-          font-size: 50px;
-          line-height: 60px;
-        }
-        @include bp($desktopFullHd, min) {
-          font-size: 64px;
-          line-height: 70px;
-        }
-      }
+      // @include bp($tablet, min) {
+      //   display: block;
+      // }
+      // &__title {
+      //   @include bp($tablet, min) {
+      //     text-transform: capitalize;
+      //     font-weight: 200;
+      //     font-size: 38px;
+      //     line-height: 48px;
+      //     padding-left: 20px;
+      //     box-sizing: border-box;
+      //   }
+      //   @include bp($desktopSmall, min) {
+      //     font-size: 50px;
+      //     line-height: 60px;
+      //   }
+      //   @include bp($desktopFullHd, min) {
+      //     font-size: 64px;
+      //     line-height: 70px;
+      //   }
+      // }
     }
 
     .header-cart-button-container {
+      position: relative;
+      background-color: #d9644a;
+      width: 60%;
+      height: 100%;
+      -webkit-transform: skewX(-45deg);
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+      transform: skewX(-45deg);
       &__cart-button {
+        padding-left: 30vw;
+        box-sizing: border-box;
         display: block;
-        width: 120px;
-        height: 40px;
-        padding-right: 10px;
-        background: url('~assets/img/cart.png') no-repeat, #d9644a;
-        background-position: 10px center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
         background-size: 26px;
-        text-align: right;
-        font-size: 24px;
-        line-height: 40px;
+        text-align: left;
+        font-size: 22px;
+        line-height: 42px;
         color: #ffffff;
         text-decoration: none;
-        cursor: pointer;
+        -webkit-transform: skewX(45deg);
+        -moz-transform: skewX(45deg);
+        -ms-transform: skewX(45deg);
+        -o-transform: skewX(45deg);
+        transform: skewX(45deg);
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 24vw;
+          -webkit-transform: translate3d(-50%, -50%, 0);
+          -moz-transform: translate3d(-50%, -50%, 0);
+          -ms-transform: translate3d(-50%, -50%, 0);
+          -o-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+          width: 25px;
+          height: 25px;
+          background-image: url('~assets/img/cart.png');
+          background-size: cover;
+        }
         @include bp($tablet, min) {
           width: 180px;
           height: 40px;
@@ -112,6 +163,7 @@
     }
   }
   .mobile-header-title-container {
+    background-color: #d9caad;
     @include bp($tablet, min) {
       display: none;
     }

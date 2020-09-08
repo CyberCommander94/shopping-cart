@@ -1,0 +1,18 @@
+@import 'fonts.scss';
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'main.scss';
+
+// layouts
+
+@import '../layouts/main-layout';
+
+// pages
+
+@import '../pages/index';
+
+// components
+
+@import '../components/app-header-component';
+@import '../components/categories-item-component';
