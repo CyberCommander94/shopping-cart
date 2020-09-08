@@ -16,7 +16,7 @@
           v-if="isCartBtnVisible"
           class="header-cart-button-container__cart-button"
           to="/cart"
-          >${{ totalCost }}
+          ><span>${{ totalCost }}</span>
         </nuxt-link>
       </div>
     </div>
