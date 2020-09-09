@@ -19,7 +19,7 @@
     align-items: flex-start;
     overflow: hidden;
     @include bp($tablet, min) {
-
+      background-color: #d9caad;
     }
     @include bp($desktopSmall, min) {
 
@@ -39,6 +39,9 @@
       -o-transform: skewX(-45deg);
       transform: skewX(-45deg);
       z-index: 10;
+      @include bp($tablet, min) {
+        width: 20%;
+      }
       &__back-button {
         display: block;
         position: relative;
@@ -59,6 +62,50 @@
           height: 30px;
           background-image: url('~assets/img/back-btn.png');
           background-size: cover;
+          @include bp($tablet, min) {
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            left: 18vw;
+          }
+          @include bp($desktopSmall, min) {
+  
+          }
+          @include bp($desktopFullHd, min) {
+  
+          }
+        }
+      }
+    }
+    .header-title-container {
+      background-color: #d9caad;
+      display: none;
+      width: 60%;
+      height: 100%;
+      -webkit-transform: skewX(-45deg);
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+      transform: skewX(-45deg);
+      z-index: 10;
+      @include bp($tablet, min) {
+        display: flex;
+        align-items: center;
+      }
+      &__title {
+        -webkit-transform: skewX(45deg);
+        -moz-transform: skewX(45deg);
+        -ms-transform: skewX(45deg);
+        -o-transform: skewX(45deg);
+        transform: skewX(45deg);
+        @include bp($tablet, min) {
+          text-transform: capitalize;
+          width: 100%;
+          font-weight: 200;
+          font-size: 22px;
+          line-height: 26px;
+          box-sizing: border-box;
+          text-align: center;
         }
         @include bp($desktopSmall, min) {
 
@@ -67,32 +114,6 @@
 
         }
       }
-    }
-    .header-title-container {
-      background-color: #d9caad;
-      display: none;
-      width: 75%;
-      // @include bp($tablet, min) {
-      //   display: block;
-      // }
-      // &__title {
-      //   @include bp($tablet, min) {
-      //     text-transform: capitalize;
-      //     font-weight: 200;
-      //     font-size: 38px;
-      //     line-height: 48px;
-      //     padding-left: 20px;
-      //     box-sizing: border-box;
-      //   }
-      //   @include bp($desktopSmall, min) {
-      //     font-size: 50px;
-      //     line-height: 60px;
-      //   }
-      //   @include bp($desktopFullHd, min) {
-      //     font-size: 64px;
-      //     line-height: 70px;
-      //   }
-      // }
     }
 
     .header-cart-button-container {
@@ -106,6 +127,9 @@
       -o-transform: skewX(-45deg);
       transform: skewX(-45deg);
       z-index: 10;
+      @include bp($tablet, min) {
+        width: 20%;
+      }
       &__cart-button {
         box-sizing: border-box;
         display: block;
@@ -136,10 +160,27 @@
             height: 25px;
             background-image: url('~assets/img/cart.png');
             background-size: cover;
+            @include bp($tablet, min) {
+              top: 0;
+              left: -30px;
+              width: 20px;
+              height: 20px;
+            }
+            @include bp($desktopSmall, min) {
+    
+            }
+            @include bp($desktopFullHd, min) {
+    
+            }
           }
         }
         @include bp($tablet, min) {
-
+          text-align: center;
+          padding-left: 36px;
+          box-sizing: border-box;
+          font-size: 18px;
+          line-height: 52px;
+          padding-right: 10vw;
         }
         @include bp($desktopSmall, min) {
 
