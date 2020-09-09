@@ -24,6 +24,11 @@
     @include bp($desktopSmall, min) {
 
     }
+    &.shadowed{
+      -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+    }
     .header-back-button-container {
       background-color: #4ea686;
       width: 40%;

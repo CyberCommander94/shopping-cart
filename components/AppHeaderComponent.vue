@@ -1,6 +1,6 @@
 <template>
   <header class="header-block">
-    <div class="elements-wrapper">
+    <div :class="{ 'elements-wrapper': true, shadowed: scrollTop > 0 }">
       <div class="header-back-button-container">
         <nuxt-link
           v-if="isBackBtnVisible"
