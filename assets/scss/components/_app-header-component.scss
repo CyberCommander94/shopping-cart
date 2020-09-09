@@ -114,7 +114,7 @@
           text-align: center;
         }
         @include bp($desktopSmall, min) {
-          font-size: 32px;
+          font-size: 30px;
           line-height: 26px;
         }
         @include bp($desktopFullHd, min) {

@@ -1,11 +1,7 @@
 <template>
   <nuxt-link
     :to="{ params: { id: itemInfo.id } }"
-    :class="{
-      ratioClass: true,
-      'category-item': true,
-      'category-item-mobile': isMobileDevice && isMobileWindowWidth
-    }"
+    :class="[ratioClass, { 'category-item': true }]"
   >
     <figure :style="{ 'background-image': 'url(' + itemInfo.categoryBg + ')' }">
       <figcaption>{{ itemInfo.categoryName }}</figcaption>
@@ -14,8 +10,6 @@
 </template>
 
 <script>
-import { isMobileOnly } from 'mobile-device-detect'
-
 export default {
   props: {
     itemInfo: {
@@ -39,11 +33,10 @@ export default {
   },
   data() {
     return {
-      isMobileDevice: isMobileOnly,
       ratioClass: ''
     }
   },
-  async created() {
+  async beforeMount() {
     await this.getImgRatio(this.itemInfo.categoryBg).then((ratio) => {
       this.ratioClass = this.addRatioClass(ratio)
     })

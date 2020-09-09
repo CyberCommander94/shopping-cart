@@ -8,16 +8,15 @@
       :mobile-content-scroll="mobileContentScrollComputed"
     />
     <section
-      class="categories-list-container-mobile"
+      class="categories-list-container"
       @scroll="getScrolledPixels($event)"
     >
-      <div class="categories-list-wrapper-mobile">
+      <div class="categories-list-wrapper">
         <CategoriesItem
           v-for="(item, index) in getCategoriesData"
           :key="index"
           :item-info="item"
           :index="index"
-          :is-mobile-window-width="isMobileWindowWidth"
         />
       </div>
     </section>
@@ -26,7 +25,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { vueWindowSizeMixin } from 'vue-window-size'
 import CategoriesItem from '~/components/CategoriesItemComponent.vue'
 
 export default {
@@ -34,7 +32,6 @@ export default {
     CategoriesItem
   },
   layout: 'mainLayout',
-  mixins: [vueWindowSizeMixin],
   data() {
     return {
       mobileContentScroll: 0
@@ -42,9 +39,6 @@ export default {
   },
   computed: {
     ...mapGetters('pages/categories', ['getCategoriesData']),
-    isMobileWindowWidth() {
-      return this.windowWidth < 768
-    },
     mobileContentScrollComputed() {
       return this.mobileContentScroll
     }
