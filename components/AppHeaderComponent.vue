@@ -20,7 +20,10 @@
         </nuxt-link>
       </div>
     </div>
-    <div class="mobile-header-title-container">
+    <div
+      class="mobile-header-title-container"
+      :style="{ transform: 'translatey(' + -scrollTop + 'px)' }"
+    >
       <h2 class="mobile-header-title-container__title">{{ title }}</h2>
     </div>
   </header>
@@ -44,10 +47,19 @@ export default {
     totalCost: {
       type: String,
       default: ''
+    },
+    mobileContentScroll: {
+      type: Number,
+      default: 0
     }
   },
   data() {
     return {}
+  },
+  computed: {
+    scrollTop() {
+      return this.mobileContentScroll > 70 ? 70 : this.mobileContentScroll
+    }
   }
 }
 </script>
