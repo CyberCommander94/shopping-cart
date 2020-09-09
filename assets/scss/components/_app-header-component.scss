@@ -7,9 +7,6 @@
   box-sizing: border-box;
   background-color: #ffffff;
   z-index: 9999;
-  @include bp($desktopSmall, min) {
-    padding: 30px 30px 0 30px;
-  }
   .elements-wrapper {
     background-color: #4ea686;
     width: 100%;
@@ -22,7 +19,10 @@
       background-color: #d9caad;
     }
     @include bp($desktopSmall, min) {
-
+      height: 65px;
+    }
+    @include bp($desktopFullHd, min) {
+      height: 80px;
     }
     &.shadowed{
       -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
@@ -69,10 +69,16 @@
             left: 18vw;
           }
           @include bp($desktopSmall, min) {
-  
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            left: 18vw;
           }
           @include bp($desktopFullHd, min) {
-  
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            left: 18vw;
           }
         }
       }
@@ -108,10 +114,12 @@
           text-align: center;
         }
         @include bp($desktopSmall, min) {
-
+          font-size: 32px;
+          line-height: 26px;
         }
         @include bp($desktopFullHd, min) {
-
+          font-size: 44px;
+          line-height: 26px;
         }
       }
     }
@@ -167,10 +175,16 @@
               height: 20px;
             }
             @include bp($desktopSmall, min) {
-    
+              top: 0;
+              left: -34px;
+              width: 30px;
+              height: 28px;
             }
             @include bp($desktopFullHd, min) {
-    
+              top: 0;
+              left: -52px;
+              width: 44px;
+              height: 42px;
             }
           }
         }
@@ -183,10 +197,13 @@
           padding-right: 10vw;
         }
         @include bp($desktopSmall, min) {
-
+          font-size: 26px;
+          line-height: 62px;
         }
         @include bp($desktopFullHd, min) {
-
+          font-size: 40px;
+          line-height: 78px;
+          padding-right: 8vw;
         }
       }
     }
