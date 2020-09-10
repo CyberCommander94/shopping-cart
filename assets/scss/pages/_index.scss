@@ -19,7 +19,7 @@
     }
   }
   @include bp($tablet, min) {
-    height: 640px;
+    height: 100vh;
     padding: 90px 0 40px 40px;
     margin-bottom: 20px;
     width: 100vw;
@@ -28,11 +28,9 @@
     overflow-y: hidden;
   }
   @include bp($desktopSmall, min) {
-    height: 760px;
     padding: 100px 0 30px 40px;
   }
   @include bp($desktopFullHd, min) {
-    height: 1090px;
     padding: 120px 0 10px 40px;
   }
   .categories-list-wrapper {
@@ -41,14 +39,14 @@
     @include bp($tablet, min) {
       display: grid;
       grid-gap: 20px;
-      grid-template-rows: repeat(auto-fit, 150px);
+      grid-template-rows: repeat(auto-fit, 30%);
       grid-auto-flow: column dense;
     }
     @include bp($desktopSmall, min) {
-      grid-template-rows: repeat(auto-fit, 190px);
+      grid-template-rows: repeat(auto-fit, 30%);
     }
     @include bp($desktopFullHd, min) {
-      grid-template-rows: repeat(auto-fit, 290px);
+      grid-template-rows: repeat(auto-fit, 30%);
     }
   }
 }
