@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="{ params: { id: itemInfo.id } }"
+    :to="{ name: 'categories-id', params: { id: itemInfo.id } }"
     :class="[ratioClass, { 'category-item': true }]"
   >
     <figure :style="{ 'background-image': 'url(' + itemInfo.categoryBg + ')' }">

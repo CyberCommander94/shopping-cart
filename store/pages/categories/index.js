@@ -29,7 +29,7 @@ export const state = () => ({
     },
     {
       id: '1235',
-      categoryName: 'Caps',
+      categoryName: 'Cups',
       categoryBg: '/categories/caps_bg.jpg',
       categoryGoods: [
         {
@@ -144,10 +144,12 @@ export const getters = {
       }
     })
   },
-  getCategoryData(state, id) {
-    return state.categoriesData.find((element) => {
-      return element.id === id
-    })
+  getCategoryData(state) {
+    return (id) => {
+      return state.categoriesData.find((element) => {
+        return element.id === id
+      })
+    }
   }
 }
 

@@ -2,11 +2,11 @@
   <header class="header-block">
     <div :class="{ 'elements-wrapper': true, shadowed: scrollTop > 0 }">
       <div class="header-back-button-container">
-        <nuxt-link
+        <div
           v-if="isBackBtnVisible"
           class="header-back-button-container__back-button"
-          to="/cart"
-        ></nuxt-link>
+          @click="goBack()"
+        ></div>
       </div>
       <div class="header-title-container">
         <h2 class="header-title-container__title">{{ title }}</h2>
@@ -59,6 +59,11 @@ export default {
   computed: {
     scrollTop() {
       return this.mobileContentScroll > 70 ? 70 : this.mobileContentScroll
+    }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
     }
   }
 }

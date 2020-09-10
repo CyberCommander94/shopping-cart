@@ -2,7 +2,7 @@
   <div class="home-page">
     <AppHeaderComponent
       title="Shopping Cart. Make Your purchases right now!"
-      :is-back-btn-visible="true"
+      :is-back-btn-visible="false"
       :is-cart-btn-visible="true"
       total-cost="5640"
       :mobile-content-scroll="mobileContentScrollComputed"
