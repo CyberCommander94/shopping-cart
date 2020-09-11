@@ -6,21 +6,25 @@ export const state = () => ({
       categoryBg: '/categories/t-shirts_bg.jpg',
       categoryGoods: [
         {
+          id: '1111',
           name: 'Green-Xtreame',
           path: '/categories/t-shirts/green_xtreame.jpg',
           cost: 250
         },
         {
+          id: '1112',
           name: 'Digital Owl',
           path: '/categories/t-shirts/digital_owl.jpg',
           cost: 312
         },
         {
+          id: '1113',
           name: 'I Can',
           path: '/categories/t-shirts/i_can.jpg',
           cost: 280
         },
         {
+          id: '1114',
           name: 'GB Shirts',
           path: '/categories/t-shirts/gb_shirts.jpg',
           cost: 200
@@ -33,11 +37,13 @@ export const state = () => ({
       categoryBg: '/categories/caps_bg.jpg',
       categoryGoods: [
         {
+          id: '2221',
           name: 'BLue Cup',
           path: '/categories/caps/blue_cup.jpg',
           cost: 110
         },
         {
+          id: '2222',
           name: 'Dota Cup',
           path: '/categories/caps/dota_cup.jpg',
           cost: 130
@@ -50,11 +56,13 @@ export const state = () => ({
       categoryBg: '/categories/cards_bg.jpg',
       categoryGoods: [
         {
+          id: '3331',
           name: 'Happy Birthday',
           path: '/categories/cards/birthday.jpg',
           cost: 50
         },
         {
+          id: '3332',
           name: 'Marry Christmas',
           path: '/categories/cards/christmas.jpg',
           cost: 60
@@ -67,16 +75,19 @@ export const state = () => ({
       categoryBg: '/categories/toys_bg.jpg',
       categoryGoods: [
         {
+          id: '4441',
           name: 'Donald Duck',
           path: '/categories/toys/donald.jpg',
           cost: 300
         },
         {
+          id: '4442',
           name: 'Monster',
           path: '/categories/toys/monster.jpg',
           cost: 250
         },
         {
+          id: '4443',
           name: 'Bear',
           path: '/categories/toys/bear.jpg',
           cost: 280

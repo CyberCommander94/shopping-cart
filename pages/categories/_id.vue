@@ -4,7 +4,7 @@
       :title="categoryData.categoryName"
       :is-back-btn-visible="true"
       :is-cart-btn-visible="true"
-      total-cost="5640"
+      :total-cost="getTotalPrice"
       :mobile-content-scroll="mobileContentScrollComputed"
     />
     <section class="goods-list-container" @scroll="getScrolledPixels($event)">
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import CategoryGoodsItem from '~/components/CategoryGoodsItemComponent.vue'
 
 export default {
@@ -34,6 +35,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('pages/cart', ['getTotalPrice']),
     categoryData() {
       return this.$store.getters['pages/categories/getCategoryData'](
         this.$route.params.id

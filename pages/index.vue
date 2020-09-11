@@ -4,7 +4,7 @@
       title="Shopping Cart. Make Your purchases right now!"
       :is-back-btn-visible="false"
       :is-cart-btn-visible="true"
-      total-cost="5640"
+      :total-cost="getTotalPrice"
       :mobile-content-scroll="mobileContentScrollComputed"
     />
     <section
@@ -39,6 +39,7 @@ export default {
   },
   computed: {
     ...mapGetters('pages/categories', ['getCategoriesData']),
+    ...mapGetters('pages/cart', ['getTotalPrice']),
     mobileContentScrollComputed() {
       return this.mobileContentScroll
     }
