@@ -7,7 +7,11 @@
       :total-cost="getTotalPrice"
       :mobile-content-scroll="mobileContentScrollComputed"
     />
-    <section class="goods-list-container" @scroll="getScrolledPixels($event)">
+    <section
+      v-if="categoryData.categoryGoods.length"
+      class="goods-list-container"
+      @scroll="getScrolledPixels($event)"
+    >
       <div class="goods-list-wrapper">
         <CategoryGoodsItem
           v-for="(item, index) in categoryData.categoryGoods"
@@ -17,6 +21,10 @@
         />
       </div>
     </section>
+    <EmptyFolderMessageComponent
+      v-else
+      message="This category don't have any goods now!"
+    />
   </div>
 </template>
 
@@ -36,10 +44,9 @@ export default {
   },
   computed: {
     ...mapGetters('pages/cart', ['getTotalPrice']),
+    ...mapGetters('pages/categories', ['getCategoryData']),
     categoryData() {
-      return this.$store.getters['pages/categories/getCategoryData'](
-        this.$route.params.id
-      )
+      return this.getCategoryData(this.$route.params.id)
     },
     mobileContentScrollComputed() {
       return this.mobileContentScroll

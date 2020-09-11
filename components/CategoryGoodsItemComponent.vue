@@ -10,14 +10,14 @@
       <button @click="subAmount()">-</button>
       <div class="amount-info">
         amount<br />
-        <p>{{ currItemAmount }}</p>
+        <p>{{ getCurrItemAmount(itemInfo.id) }}</p>
       </div>
       <button @click="addAmount()">+</button>
     </div>
   </article>
 </template>
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 export default {
   props: {
     itemInfo: {
@@ -31,11 +31,7 @@ export default {
     return {}
   },
   computed: {
-    currItemAmount() {
-      return this.$store.getters['pages/cart/getCurrItemAmount'](
-        this.itemInfo.id
-      )
-    }
+    ...mapGetters('pages/cart', ['getCurrItemAmount'])
   },
   methods: {
     ...mapMutations('pages/cart', ['addCartItem', 'removeCartItem']),

@@ -45,8 +45,8 @@ export default {
       default: false
     },
     totalCost: {
-      type: String,
-      default: ''
+      type: Number,
+      default: 0
     },
     mobileContentScroll: {
       type: Number,

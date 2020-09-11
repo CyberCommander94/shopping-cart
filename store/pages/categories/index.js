@@ -146,7 +146,7 @@ export const state = () => ({
 })
 
 export const getters = {
-  getCategoriesData(state) {
+  getCategoriesData: (state) => {
     return state.categoriesData.map((item) => {
       return {
         id: item.id,
@@ -155,17 +155,11 @@ export const getters = {
       }
     })
   },
-  getCategoryData(state) {
+  getCategoryData: (state) => {
     return (id) => {
       return state.categoriesData.find((element) => {
         return element.id === id
       })
     }
-  }
-}
-
-export const mutations = {
-  setCategoriesData(state, payload) {
-    state.categoriesData = payload
   }
 }

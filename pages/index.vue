@@ -8,6 +8,7 @@
       :mobile-content-scroll="mobileContentScrollComputed"
     />
     <section
+      v-if="getCategoriesData.length > 0"
       class="categories-list-container"
       @scroll="getScrolledPixels($event)"
     >
@@ -20,6 +21,10 @@
         />
       </div>
     </section>
+    <EmptyFolderMessageComponent
+      v-else
+      message="Shop don't have any categories right now!"
+    />
   </div>
 </template>
 

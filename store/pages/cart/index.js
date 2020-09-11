@@ -2,27 +2,22 @@ export const state = () => ({
   cartData: []
 })
 export const getters = {
-  getTotalPrice(state) {
+  getTotalPrice: (state) => {
     return state.cartData.reduce((total, element) => {
       return (total += element.amount * element.cost)
     }, 0)
   },
-  getCurrItemAmount(state) {
-    return (id) => {
-      if (state.cartData) {
-        const item = state.cartData.find((elem) => {
-          return elem.id === id
-        })
-        return item ? item.amount : 0
-      } else {
-        return 0
-      }
+  getCurrItemAmount: (state) => (id) => {
+    if (state.cartData) {
+      const item = state.cartData.find((elem) => elem.id === id)
+      return item ? item.amount : 0
     }
+    return 0
   }
 }
 
 export const mutations = {
-  addCartItem(state, payload) {
+  addCartItem: (state, payload) => {
     const itemIndex = state.cartData.findIndex((item) => {
       return item.id === payload.id
     })
@@ -32,7 +27,7 @@ export const mutations = {
       state.cartData.push(payload)
     }
   },
-  removeCartItem(state, payload) {
+  removeCartItem: (state, payload) => {
     const itemIndex = state.cartData.findIndex((item) => {
       return item.id === payload.id
     })
@@ -43,7 +38,5 @@ export const mutations = {
       state.cartData.splice(itemIndex, 1)
     }
   },
-  clearCartData(state) {
-    state.cartData = []
-  }
+  clearCartData: (state) => (state.cartData = [])
 }
