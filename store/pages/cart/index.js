@@ -2,6 +2,9 @@ export const state = () => ({
   cartData: []
 })
 export const getters = {
+  getCartData: (state) => {
+    return state.cartData
+  },
   getTotalPrice: (state) => {
     return state.cartData.reduce((total, element) => {
       return (total += element.amount * element.cost)
@@ -37,6 +40,12 @@ export const mutations = {
     if (state.cartData[itemIndex].amount === 0) {
       state.cartData.splice(itemIndex, 1)
     }
+  },
+  deleteCartItemsGroup: (state, payload) => {
+    const itemIndex = state.cartData.findIndex((item) => {
+      return item.id === payload.id
+    })
+    state.cartData.splice(itemIndex, 1)
   },
   clearCartData: (state) => (state.cartData = [])
 }
