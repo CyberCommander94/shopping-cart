@@ -7,7 +7,7 @@
       :total-cost="getTotalPrice"
       :mobile-content-scroll="mobileContentScrollComputed"
     />
-    <div class="cart-content">
+    <div v-if="getCartData.length > 0" class="cart-content">
       <div class="cart-content__header">
         <div class="name-cell">Name:</div>
         <div class="amount-cell">Amount:</div>
@@ -15,15 +15,21 @@
       </div>
       <div class="cart-content__main">
         <div class="main-content-wrapper">
-          <div class="order-row">
-            <div class="name-cell">sdfsdfsdf jhhkh hkgghkh</div>
+          <div
+            v-for="(item, index) in getCartData"
+            :key="index"
+            class="order-row"
+          >
+            <div class="name-cell">{{ item.name }}</div>
             <div class="amount-cell">
               <div class="amount-cell__controls">
                 <div class="div-amount">-</div>
-                <span class="total-amount">12</span>
+                <span class="total-amount">{{ item.amount }}</span>
                 <div class="add-amount">+</div>
               </div>
-              <div class="amount-cell__total">$1200</div>
+              <div class="amount-cell__total">
+                ${{ item.amount * item.cost }}
+              </div>
             </div>
             <div class="delete-btn-cell">
               <div class="delete-btn-cell__delete-button"></div>
@@ -33,7 +39,7 @@
       </div>
       <div class="cart-content__footer">
         <div>Cart total price:</div>
-        <div>$10000</div>
+        <div>${{ getTotalPrice }}</div>
       </div>
     </div>
     <CartFooterComponent />
