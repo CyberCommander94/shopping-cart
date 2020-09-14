@@ -1,9 +1,129 @@
-.cart-content{
+.cart-content {
   width: 100%;
   height: 100%;
-  padding: 140px 5px 20px 5px;
-  margin-bottom: 20px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  padding: 110px 5px 20px 5px;
   box-sizing: border-box;
+  &__header {
+    height: 30px;
+    display: flex;
+    width: 100%;
+    background-color: #343e40;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &__main {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: calc(100vh - 230px);
+    & > .main-content-wrapper {
+      height: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .order-row {
+        background-color: #d9644a;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: justify;
+        color: #ffffff;
+        &:nth-child(even) {
+          background-color: #bf613f;
+        }
+        .name-cell{
+          height: auto;
+          line-height: 22px;
+          font-size: 18px;
+        }
+        .amount-cell {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+          &__controls {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            line-height: 15px;
+            color: white;
+            height: 22px;
+            .div-amount {
+              width: 16px;
+              height: 16px;
+              text-align: center;
+              border: 1px solid #ffffff;
+            }
+            .add-amount {
+              width: 16px;
+              height: 16px;
+              text-align: center;
+              border: 1px solid #ffffff;
+            }
+            .total-amount {
+              font-size: 18px;
+              line-height: 16px;
+            }
+          }
+          &__total {
+            line-height: 22px;
+            color: #ffffff;
+            font-weight: 400;
+          }
+        }
+        .delete-btn-cell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &__delete-button {
+            width: 20px;
+            height: 20px; 
+            background: url('~assets/img/delete-ico.png') no-repeat center center;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    height: 30px;
+    display: flex;
+    width: 100%;
+    background-color: #343e40;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    div {
+      line-height: 30px;
+      &:first-child {
+        width: 76%;
+        text-align: right;
+      }
+      &:last-child {
+        width: 24%;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+  .name-cell {
+    width: 50%;
+  }
+  .amount-cell {
+    text-align: center;
+    width: 35%;
+  }
+  .delete-btn-cell {
+    width: 15%;
+  }
+  .name-cell,
+  .amount-cell,
+  .delete-btn-cell {
+    line-height: 30px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 100%;
+  }
 }
