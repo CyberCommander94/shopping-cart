@@ -9,16 +9,37 @@
         </nuxt-link>
       </div>
       <div class="footer-buy-button-container">
-        <nuxt-link class="footer-buy-button-container__buy-button" to="/"
-          ><span>Make purchase!</span>
-        </nuxt-link>
+        <div
+          class="footer-buy-button-container__buy-button"
+          to="/"
+          @click="buyItems()"
+        >
+          <span>Make purchase!</span>
+        </div>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
-export default {}
+import { mapMutations } from 'vuex'
+
+export default {
+  props: {
+    totalPrice: {
+      type: Number,
+      default: 0
+    }
+  },
+  methods: {
+    ...mapMutations('pages/cart', ['clearCartData']),
+    buyItems() {
+      alert('Items sold! Total price: ' + '$' + this.totalPrice)
+      this.clearCartData()
+      this.$router.push('/')
+    }
+  }
+}
 </script>
 
 <style></style>

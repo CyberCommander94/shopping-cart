@@ -23,16 +23,19 @@
             <div class="name-cell">{{ item.name }}</div>
             <div class="amount-cell">
               <div class="amount-cell__controls">
-                <div class="div-amount">-</div>
+                <div class="div-amount" @click="subAmount(item)">-</div>
                 <span class="total-amount">{{ item.amount }}</span>
-                <div class="add-amount">+</div>
+                <div class="add-amount" @click="addAmount(item)">+</div>
               </div>
               <div class="amount-cell__total">
                 ${{ item.amount * item.cost }}
               </div>
             </div>
             <div class="delete-btn-cell">
-              <div class="delete-btn-cell__delete-button"></div>
+              <div
+                class="delete-btn-cell__delete-button"
+                @click="deleteCartItemsGroup(item)"
+              ></div>
             </div>
           </div>
         </div>
@@ -42,7 +45,7 @@
         <div>${{ getTotalPrice }}</div>
       </div>
     </div>
-    <CartFooterComponent />
+    <CartFooterComponent :total-price="getTotalPrice" />
     <EmptyFolderMessageComponent
       v-if="getTotalPrice === 0"
       message="Your cart is empty now!"
@@ -71,16 +74,12 @@ export default {
   },
   methods: {
     ...mapMutations('pages/cart', [
-      'clearCartData',
       'deleteCartItemsGroup',
+      'addCartItem',
       'removeCartItem'
     ]),
     getScrolledPixels(event) {
       this.mobileContentScroll = event.target.scrollTop
-    },
-    buyItems() {
-      alert('Items sold! Total price: ' + this.getTotalPrice + '$')
-      this.clearCartData()
     },
     addAmount(itemInfo) {
       this.addCartItem({
@@ -89,6 +88,9 @@ export default {
         amount: 1,
         cost: itemInfo.cost
       })
+    },
+    subAmount(itemInfo) {
+      this.removeCartItem(itemInfo)
     }
   }
 }
