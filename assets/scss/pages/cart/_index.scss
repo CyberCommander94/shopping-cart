@@ -24,7 +24,7 @@
       height: 35px;
     }
     @include bp($desktopSmall, min) {
-      height: 40px; 
+      height: 40px;
     }
     @include bp($desktopFullHd, min) {
       height: 50px;
@@ -60,7 +60,7 @@
         &:nth-child(even) {
           background-color: #bf613f;
         }
-        .name-cell{
+        .name-cell {
           height: auto;
           line-height: 22px;
           font-size: 16px;
@@ -89,15 +89,6 @@
             line-height: 15px;
             color: white;
             height: 26px;
-            @include bp($tablet, min) {
-
-            }
-            @include bp($desktopSmall, min) {
-
-            }
-            @include bp($desktopFullHd, min) {
-
-            }
             .div-amount {
               width: 16px;
               height: 16px;
@@ -185,7 +176,8 @@
             cursor: pointer;
             width: 20px;
             height: 20px;
-            background: url('~assets/img/delete-ico.png') no-repeat center center;
+            background: url('~assets/img/delete-ico.png') no-repeat center
+              center;
             background-size: contain;
             @include bp($tablet, min) {
               width: 23px;
@@ -216,7 +208,7 @@
       height: 35px;
     }
     @include bp($desktopSmall, min) {
-      height: 40px; 
+      height: 40px;
     }
     @include bp($desktopFullHd, min) {
       height: 50px;
