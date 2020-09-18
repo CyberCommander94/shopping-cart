@@ -23,9 +23,9 @@
             <div class="name-cell">{{ item.name }}</div>
             <div class="amount-cell">
               <div class="amount-cell__controls">
-                <div class="div-amount" @click="subAmount(item)">-</div>
+                <div class="div-amount" @click="subAmount(item)"></div>
                 <span class="total-amount">{{ item.amount }}</span>
-                <div class="add-amount" @click="addAmount(item)">+</div>
+                <div class="add-amount" @click="addAmount(item)"></div>
               </div>
               <div class="amount-cell__total">
                 ${{ item.amount * item.cost }}

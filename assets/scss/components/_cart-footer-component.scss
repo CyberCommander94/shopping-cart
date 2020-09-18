@@ -15,6 +15,9 @@
     justify-content: space-between;
     align-items: flex-start;
     overflow: hidden;
+    @include bpo($mobileSmall, min, landscape) {
+      height: 40px;
+    }
     @include bp($desktopSmall, min) {
       height: 65px;
     }
@@ -48,6 +51,9 @@
         -o-transform: skewX(45deg);
         transform: skewX(45deg);
         padding-left: 5vw;
+        @include bpo($mobileSmall, min, landscape) {
+          line-height: 38px;
+        }
         @include bp($tablet, min) {
           font-size: 18px;
           line-height: 52px;
@@ -95,6 +101,9 @@
         -o-transform: skewX(45deg);
         transform: skewX(45deg);
         padding-right: 5vw;
+        @include bpo($mobileSmall, min, landscape) {
+          line-height: 38px;
+        }
         @include bp($tablet, min) {
           font-size: 18px;
           line-height: 52px;

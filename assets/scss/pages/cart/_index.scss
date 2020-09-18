@@ -92,9 +92,9 @@
             .div-amount {
               width: 16px;
               height: 16px;
-              text-align: center;
-              border: 1px solid #ffffff;
               cursor: pointer;
+              background: url('~assets/img/minus.png') no-repeat center center;
+              background-size: cover;
               @include bp($tablet, min) {
                 width: 20px;
                 height: 20px;
@@ -114,9 +114,9 @@
             .add-amount {
               width: 16px;
               height: 16px;
-              text-align: center;
-              border: 1px solid #ffffff;
               cursor: pointer;
+              background: url('~assets/img/plus.png') no-repeat center center;
+              background-size: cover;
               @include bp($tablet, min) {
                 width: 20px;
                 height: 20px;

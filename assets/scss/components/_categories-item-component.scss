@@ -7,6 +7,18 @@
   -webkit-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.3);
+  @include bpo($mobileSmall, min, landscape) {
+    width: 30%;
+    height: 210px;
+  }
+  @include bpo($mobile, min, landscape) {
+    width: 30%;
+    height: 210px;
+  }
+  @include bp($mobileSmall, min) {
+    width: 48%;
+    height: 210px;
+  }
   @include bp($tablet, min) {
     height: auto;
     width: auto;
@@ -21,6 +33,14 @@
     width: 100%;
     cursor: pointer;
     overflow: hidden;
+    @include bpo($mobileSmall, min, landscape) {
+      height: 100%;
+      width: 100%;
+    }
+    @include bp($mobileSmall, min) {
+      height: 100%;
+      width: 100%;
+    }
     @include bp($tablet, min) {
       height: 100%;
       width: 100%;
@@ -36,6 +56,11 @@
       font-size: 22px;
       line-height: 40px;
       padding-left: 20px;
+      @include bpo($mobileSmall, min, landscape) {
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+      }
       @include bp($tablet, min) {
         height: 50px;
         font-size: 26px;
@@ -57,6 +82,12 @@
     grid-column: span 18;
     grid-row-end: span 2;
     @include bp($desktopSmall, min) {
+      grid-column: span 18;
+    }
+    @include bpo($desktopSmall, min, portrait) {
+      grid-column: span 32;
+    }
+    @include bp($desktop, min) {
       grid-column: span 20;
     }
     @include bp($desktopFullHd, min) {
@@ -67,6 +98,12 @@
     grid-column: span 12;
     grid-row-end: span 2;
     @include bp($desktopSmall, min) {
+      grid-column: span 12;
+    }
+    @include bpo($desktopSmall, min, portrait) {
+      grid-column: span 22;
+    }
+    @include bp($desktop, min) {
       grid-column: span 14;
     }
     @include bp($desktopFullHd, min) {
@@ -77,6 +114,12 @@
     grid-column: span 18;
     grid-row-end: span 1;
     @include bp($desktopSmall, min) {
+      grid-column: span 18;
+    }
+    @include bpo($desktopSmall, min, portrait) {
+      grid-column: span 32;
+    }
+    @include bp($desktop, min) {
       grid-column: span 20;
     }
     @include bp($desktopFullHd, min) {
@@ -87,6 +130,12 @@
     grid-column: span 12;
     grid-row-end: span 1;
     @include bp($desktopSmall, min) {
+      grid-column: span 12;
+    }
+    @include bpo($desktopSmall, min, portrait) {
+      grid-column: span 22;
+    }
+    @include bp($desktop, min) {
       grid-column: span 14;
     }
     @include bp($desktopFullHd, min) {
@@ -97,6 +146,12 @@
     grid-column: span 24;
     grid-row-end: span 1;
     @include bp($desktopSmall, min) {
+      grid-column: span 24;
+    }
+    @include bpo($desktopSmall, min, portrait) {
+      grid-column: span 44;
+    }
+    @include bp($desktop, min) {
       grid-column: span 28;
     }
     @include bp($desktopFullHd, min) {

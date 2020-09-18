@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin bpo($point, $type: max, $orientation: portrait) {
+  @media all and (#{$type}-width: #{$point}px) and (orientation: #{$orientation}) {
+    @content;
+  }
+}

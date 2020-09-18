@@ -7,12 +7,12 @@
       </figcaption>
     </figure>
     <div class="control-btns">
-      <button @click="subAmount()">-</button>
+      <div class="btn minus-btn" @click="subAmount()"></div>
       <div class="amount-info">
         amount<br />
         <p>{{ getCurrItemAmount(itemInfo.id) }}</p>
       </div>
-      <button @click="addAmount()">+</button>
+      <div class="btn add-btn" @click="addAmount()"></div>
     </div>
   </article>
 </template>

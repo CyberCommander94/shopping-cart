@@ -11,7 +11,7 @@
     background-color: #4ea686;
     width: 100%;
     display: flex;
-    height: 50px;
+    height: 40px;
     justify-content: space-between;
     align-items: flex-start;
     overflow: hidden;
@@ -24,7 +24,7 @@
     @include bp($desktopFullHd, min) {
       height: 80px;
     }
-    &.shadowed{
+    &.shadowed {
       -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
       box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
@@ -148,7 +148,7 @@
         background-size: 26px;
         text-align: center;
         font-size: 22px;
-        line-height: 52px;
+        line-height: 42px;
         color: #ffffff;
         text-decoration: none;
         -webkit-transform: skewX(45deg);
@@ -210,7 +210,7 @@
   }
   .mobile-header-title-container {
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 0;
     width: 120vw;
     box-sizing: border-box;
@@ -224,8 +224,8 @@
       text-transform: capitalize;
       text-align: center;
       font-weight: 200;
-      font-size: 23px;
-      line-height: 24px;
+      font-size: 19px;
+      line-height: 21px;
     }
   }
 }

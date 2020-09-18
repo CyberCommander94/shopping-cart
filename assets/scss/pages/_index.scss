@@ -6,7 +6,7 @@
 .categories-list-container {
   width: 100%;
   height: 100%;
-  padding: 140px 20px 20px 20px;
+  padding: 110px 8vw 20px;
   margin-bottom: 20px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -18,17 +18,26 @@
       background: transparent;
     }
   }
+  @include bpo($tablet, max, landscape) {
+    padding: 90px 20px 10px 20px;
+  }
   @include bp($tablet, min) {
     height: 100vh;
-    padding: 90px 40px 40px 40px;
+    padding: 70px 40px 0 40px;
     margin-bottom: 20px;
     width: 100vw;
     box-sizing: border-box;
     overflow-x: scroll;
     overflow-y: hidden;
   }
+  @include bpo($tablet, min, portrait) {
+    padding: 140px 40px 40px 40px;
+  }
   @include bp($desktopSmall, min) {
     padding: 100px 0 30px 40px;
+  }
+  @include bpo($desktopSmall, min, portrait) {
+    padding: 120px 0 0px 40px;
   }
   @include bp($desktopFullHd, min) {
     padding: 120px 0 10px 40px;
@@ -36,6 +45,16 @@
   .categories-list-wrapper {
     width: auto;
     height: 100%;
+    @include bpo($mobileSmall, min) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include bpo($tablet, max, landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
     @include bp($tablet, min) {
       min-width: max-content;
       padding-right: 40px;
