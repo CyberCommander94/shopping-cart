@@ -34,11 +34,13 @@ export const mutations = {
     const itemIndex = state.cartData.findIndex((item) => {
       return item.id === payload.id
     })
-    if (state.cartData[itemIndex].amount > 0) {
-      state.cartData[itemIndex].amount = state.cartData[itemIndex].amount - 1
-    }
-    if (state.cartData[itemIndex].amount === 0) {
-      state.cartData.splice(itemIndex, 1)
+    if (itemIndex >= 0) {
+      if (state.cartData[itemIndex].amount > 0) {
+        state.cartData[itemIndex].amount = state.cartData[itemIndex].amount - 1
+      }
+      if (state.cartData[itemIndex].amount === 0) {
+        state.cartData.splice(itemIndex, 1)
+      }
     }
   },
   deleteCartItemsGroup: (state, payload) => {
